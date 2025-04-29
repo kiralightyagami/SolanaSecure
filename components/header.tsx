@@ -56,7 +56,7 @@ export function Header() {
           </Link>
           <ThemeToggle />
           <Button asChild variant="default" size="sm" className="hidden md:flex">
-            <Link href="https://github.com/username/solana-security-dashboard">
+            <Link href="https://github.com/kiralightyagami/SolanaSecure">
               <Shield className="mr-2 h-4 w-4" />
               <span>GitHub</span>
             </Link>

@@ -61,7 +61,7 @@ export function ContributionSteps() {
       <div className="flex justify-center mt-8">
         <Button size="lg" className="gap-2" asChild>
           <a
-            href="https://github.com/username/solana-security-dashboard"
+            href="https://github.com/kiralightyagami/SolanaSecure"
             target="_blank"
             rel="noopener noreferrer"
           >
