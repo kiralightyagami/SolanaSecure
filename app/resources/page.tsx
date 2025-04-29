@@ -15,9 +15,9 @@ export default function ResourcesPage() {
   })
 
   
-  const categories = [...new Set(resources.map((r) => r.category))]
+  const categories = Array.from(new Set(resources.map((r) => r.category)))
   const allTags = resources.flatMap((r) => r.tags)
-  const tags = [...new Set(allTags)]
+  const tags = Array.from(new Set(allTags))
 
   
   const filteredResources = resources.filter((resource) => {
