@@ -192,30 +192,30 @@ export const calculateExploitStats = (): ExploitStats => {
   let totalRecovered = 0;
   
   exploits.forEach(exploit => {
-    // Count by type
+    
     typeCount[exploit.type]++;
     
-    // Count by severity
+   
     severityCount[exploit.severity]++;
     
-    // Count by month
+    
     const date = new Date(exploit.date);
     const monthYear = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}`;
     monthlyExploits[monthYear] = (monthlyExploits[monthYear] || 0) + 1;
     
-    // Sum funds lost
+   
     totalLost += exploit.fundsLost;
     
-    // Rough estimate of recovered funds based on status
+    
     if (exploit.status === 'Funds Recovered') {
-      totalRecovered += exploit.fundsLost * 0.8; // Assume 80% recovery for this status
+      totalRecovered += exploit.fundsLost * 0.8; 
     } else if (exploit.status === 'Resolved') {
-      totalRecovered += exploit.fundsLost * 0.3; // Assume 30% recovery for resolved issues
+      totalRecovered += exploit.fundsLost * 0.3; 
     }
   });
   
-  // Calculate average response time (mock data)
-  const avgResponseTime = 12.5; // in hours
+ 
+  const avgResponseTime = 12.5;
   
   return {
     totalExploits: exploits.length,
@@ -228,7 +228,7 @@ export const calculateExploitStats = (): ExploitStats => {
   };
 };
 
-// Security resources
+
 export const resources: Resource[] = [
   {
     id: '1',

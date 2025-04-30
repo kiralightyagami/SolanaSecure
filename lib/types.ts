@@ -1,4 +1,4 @@
-// Types for the security dashboard
+
 
 export type ExploitType = 
   | 'Smart Contract'
